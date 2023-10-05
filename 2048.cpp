@@ -143,7 +143,12 @@ void insert(game* &gm){
     int i=rand()%4;
     int j=rand()%4;
     if(gm->arr[i][j]==0){
-        gm->arr[i][j]=2;
+        int addit=rand()%4;
+        if(addit){
+        gm->arr[i][j]=2;}
+        else{
+          gm->arr[i][j]=4;  
+        }
     }
     else{insert(gm);}
 }
